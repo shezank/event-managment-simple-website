@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Engagement Party",
+      "img": "https://images.unsplash.com/photo-1496285416008-dfb54bbaedff",
+      "price": 2500,
+      "shortDescription": "An engagement party is just that: a celebration of getting engaged. Though it typically occurs a few months after the proposal, it can also happen the night of. These “surprise” engagement parties, which are sometimes considered a separate event, are typically coordinated by a member of the couple popping the question and are more informal in nature. Immediate family members and close friends may travel to attend the smaller-scale celebration, but it is most often attended by friends or relatives that live close by to where the proposal happened, or who helped coordinate the proposal.",
+      "buttonText": "Book Now"
+    },
+    {
+      "id": 2,
+      "title": "Wedding Shower",
+      "img": "https://images.unsplash.com/photo-1473163311424-8c01f39bf36d",
+      "price": 1800,
+      "shortDescription": "In medieval times, when the father of a bride refused to provide a dowry for a marriage he disapproved of, community members would gather together to provide the bride with household items. These days, the tradition of “showering” a couple with gifts for their new home continues in a bridal or couple shower, which, per Przezdziecki, usually occurs around 12 weeks before the wedding. ",
+      "buttonText": "Book Now"
+    },
+    {
+      "id": 3,
+      "title": "Bachelorette and Bachelor Parties ",
+      "img": "https://images.unsplash.com/photo-1566737236500-c8ac43014a67",
+      "price": 3500,
+      "shortDescription": "In bachelorette and bachelor parties, brides and grooms traditionally gather separately—though joint parties are definitely common—with their favorite people to celebrate the last moments of singledom. What used to be one night of revelry has morphed into a multi-day destination affair that typically occurs six to eight weeks before the wedding, with groups jetting off to destinations such as Charleston, Texas, New York City, and Scottsdale.",
+      "buttonText": "Book Now"
+    },
+    {
+      "id": 4,
+      "title": "Mehndi Party",
+      "img": "https://plus.unsplash.com/premium_photo-1682092592909-8d26686e7f5e",
+      "price": 2000,
+      "shortDescription": "South Asian wedding celebrations are typically multi-day affairs. Across Hindu and Muslim religions, the mehndi, or henna, party is one of the most special events for a bride. During the mehndi, which is usually hosted by the bride’s family, an artist uses henna dye to apply intricate designs to the bride’s hands and/or feet.  “It has evolved now to where the families are also part of this,” says Ani Sandhu of Ace of Events. “The moms are getting it, along with cousins, siblings, aunts, friends.",
+      "buttonText": "Book Now"
+    },
+    {
+      "id": 5,
+      "title": "Welcome Party ",
+      "img": "https://images.unsplash.com/photo-1533745848184-3db07256e163",
+      "price": 2800,
+      "shortDescription": "If the majority of your guests are traveling for your wedding, a great way to express your gratitude—and to make that travel more worthwhile—is to include a welcome party in the weekend’s agenda. Thrown the night before your wedding, this event can occur after or even in place of your rehearsal dinner.",
+      "buttonText": "Book Now"
+    },
+    {
+      "id": 6,
+      "title": "Farewell Brunch",
+      "img": "https://plus.unsplash.com/premium_photo-1678914347083-cb4228a9450a",
+      "price": 3200,
+      "shortDescription": "If your loved ones partied their way through the reception and an after-party, it may be a touch unrealistic to expect them to make small talk during a sit-down meal early the next day. That’s why Przezdziecki’s favorite version of this event is a grab-n-go breakfast. “This way, you’re getting to see their faces, but you’re not asking them to get dressed [up again],” she says. “Guests can pop in on their way out, and there’s coffee cups to go, along with wrapped breakfast sandwiches and pastries.”",
+      "buttonText": "Book Now"
+    }
+  ]
+  
