@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-const Event = ({ event }) => {
+const Event = ({ event, handleBookNow }) => {
     const {id, title, price, img, buttonText } = event;
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
@@ -11,7 +11,7 @@ const Event = ({ event }) => {
                 <p className="text-3xl font-medium">${price}</p>
                 <div className="card-actions justify-between">
                     <Link to={`/events/${id}`}><button className="btn btn-outline btn-info">Lear More</button></Link>
-                    <button className="btn btn-primary">{buttonText}</button>
+                    <button onClick={()=>handleBookNow(id)} className="btn btn-primary">{buttonText}</button>
                 </div>
             </div>
         </div>

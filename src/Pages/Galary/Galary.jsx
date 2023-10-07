@@ -116,6 +116,42 @@ const Galary = () => {
                         />
                     </div>
                 </a>
+                <a
+                    aria-label="View Item"
+                    className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
+                >
+                    <div className="flex flex-col h-full">
+                        <img
+                            src="https://images.unsplash.com/photo-1519741497674-611481863552"
+                            className="object-cover w-full h-72"
+                            alt=""
+                        />
+                    </div>
+                </a>
+                <a
+                    aria-label="View Item"
+                    className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
+                >
+                    <div className="flex flex-col h-full">
+                        <img
+                            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc"
+                            className="object-cover w-full h-72"
+                            alt=""
+                        />
+                    </div>
+                </a>
+                <a
+                    aria-label="View Item"
+                    className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
+                >
+                    <div className="flex flex-col h-full">
+                        <img
+                            src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af"
+                            className="object-cover w-full h-72"
+                            alt=""
+                        />
+                    </div>
+                </a>
                 
             </div>
             

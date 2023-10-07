@@ -1,14 +1,28 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { getEventsSaveId, saveEventsId } from "../../Sharde/LocalStorage/LocalStorage";
 
 
 const EventDetails = () => {
     const events = useLoaderData();
-    const { id } = useParams();
+    const idx = useParams();
+    const idNo = parseInt(idx.id);
 
-    const eventsDetails = events.find(event => event.id == id);
-    const { title, price, shortDescription, img, buttonText } = eventsDetails;
+    const eventsDetails = events.find(event => event.id == idNo);
+    const {id, title, price, shortDescription, img, buttonText } = eventsDetails;
+
+    const handleBookNow = id =>{
+        const getEventsId = getEventsSaveId();
+        const existed = getEventsId.includes(id);
+        if(existed){
+            toast.warning("Already Book Same Events")
+        }
+        else{
+            saveEventsId(id)
+            toast.success("Successfuly Book Now Your Event")
+        }
+    }
 
     return (
         <div className="card card-compact bg-base-100 my-10">
@@ -18,7 +32,7 @@ const EventDetails = () => {
                 <p className="text-2xl"> <span className="font-semibold">Pakage Details:</span> {shortDescription}</p>
                 <p className="text-4xl font-semibold">Price: ${price}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={()=> toast.success("Successfully Book Your Party")} className="btn btn-primary">{buttonText}</button>
+                    <button onClick={()=> handleBookNow(id)} className="btn btn-primary">{buttonText}</button>
                 </div>
             </div>
             <ToastContainer />

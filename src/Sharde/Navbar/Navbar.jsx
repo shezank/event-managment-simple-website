@@ -8,8 +8,8 @@ const Navbar = () => {
 
     const navLinks = <>
         <li className="mr-2"><NavLink to="/">Home</NavLink></li>
-        <li className="mr-2"><NavLink to="/booking">Booking</NavLink></li>
         <li className="mr-2"><NavLink to="/galary">Galary</NavLink></li>
+        <li className="mr-2"><NavLink to="/booking">Booking</NavLink></li>
         <li className="mr-2"><NavLink to="/contact">Contact</NavLink></li>
     </>
 
@@ -24,7 +24,7 @@ const Navbar = () => {
                        {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Shezan Events Managments</a>
+                <a className="btn btn-ghost normal-case text-base  lg:text-xl">Shezan Events Managments</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -33,7 +33,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                {user?
-                <button onClick={logout} className="btn">Logout</button>:
+                <>
+                <p className="mr-4 hidden lg:flex">{user?.email}</p>
+                <button onClick={logout} className="btn">Logout</button>
+                </>
+                :
                 <Link to="/login"><button className="btn">Login</button></Link>
 
             }

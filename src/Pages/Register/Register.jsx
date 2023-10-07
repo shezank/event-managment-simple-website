@@ -33,6 +33,16 @@ const Register = () => {
         const password = e.target.password.value;
         console.log(email, password)
         setError('')
+        if(password.length < 6){
+            return setError("is less than 6 characters")
+        }
+        else if (password.search(/^(?=.*[A-Z]).*$/)){
+            return setError("Don't have a capital letter")
+
+        }
+        else if(password.search( /^(?=.*[>!#@$%&?"<]).*$/)){
+            return setError("don't have a special character")
+        }
         createUser(email, password)
             .then( result =>  {
                 console.log(result.user);
@@ -76,7 +86,7 @@ const Register = () => {
                             </div>
                             <p>Already Have A Account Please <Link className="underline" to='/login'>Login</Link></p>
                         </form>
-                        <div className="divider"></div> 
+                        <div className="divider">OR</div>
                         <button onClick={handleSocialLogin} className="btn btn-primary rounded-t-none"><FaGoogle></FaGoogle> Google Login</button>
                     </div>
                 </div>
