@@ -1,6 +1,6 @@
 
 import Header from "../../Sharde/Header/Header";
-import { saveEventsId } from "../../Sharde/LocalStorage/LocalStorage";
+import { getEventsSaveId, saveEventsId } from "../../Sharde/LocalStorage/LocalStorage";
 import Events from "../Events/Events";
 import OurTeams from "../OurTeams/OurTeams";
 import Users from "../Users/Users";
@@ -11,8 +11,15 @@ import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
 
     const handleBookNow = id =>{
-        saveEventsId(id)
-        toast.success("Successfuly Book Now Your Event")
+        const getEventsId = getEventsSaveId();
+        const existed = getEventsId.includes(id);
+        if(existed){
+            toast.warning("Already Book Same Events")
+        }
+        else{
+            saveEventsId(id)
+            toast.success("Successfuly Book Now Your Event")
+        }
     }
 
     return (
