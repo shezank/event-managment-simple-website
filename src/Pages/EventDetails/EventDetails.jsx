@@ -6,10 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const EventDetails = () => {
     const events = useLoaderData();
     const { id } = useParams();
-    console.log(typeof id, events)
 
     const eventsDetails = events.find(event => event.id == id);
-    console.log(eventsDetails);
     const { title, price, shortDescription, img, buttonText } = eventsDetails;
 
     return (

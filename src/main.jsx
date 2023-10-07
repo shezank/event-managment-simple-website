@@ -13,6 +13,9 @@ import Register from './Pages/Register/Register';
 import AuthProvider from './Sharde/AuthProvider/AuthProvider';
 import Booking from './Pages/Booking/Booking';
 import EventDetails from './Pages/EventDetails/EventDetails';
+import Contacts from './Pages/Contacts/Contacts';
+import PrivateRoute from './Sharde/PrivateRoute/PrivateRoute';
+import Galary from './Pages/Galary/Galary';
 
 const router = createBrowserRouter([
   {
@@ -26,12 +29,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/events/:id",
-        element: <EventDetails></EventDetails>,
+        element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>,
         loader: ()=> fetch("/events.json")
       },
       {
         path: "/booking",
         element: <Booking></Booking>
+      },
+      {
+        path: "/galary",
+        element: <PrivateRoute><Galary></Galary></PrivateRoute>
+      },
+      {
+        path: "/contact",
+        element: <Contacts></Contacts>
       },
       {
         path: "/login",
