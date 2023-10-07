@@ -7,7 +7,9 @@ const Navbar = () => {
     const {user,logout } = useContext(AuthContext);
 
     const navLinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
+        <li className="mr-2"><NavLink to="/">Home</NavLink></li>
+        <li className="mr-2"><NavLink to="/booking">Booking</NavLink></li>
+        <li className="mr-2"><NavLink to="/contacts">Contacts</NavLink></li>
     </>
 
     return (
@@ -21,7 +23,7 @@ const Navbar = () => {
                        {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className="btn btn-ghost normal-case text-xl">Shezan Events Managments</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

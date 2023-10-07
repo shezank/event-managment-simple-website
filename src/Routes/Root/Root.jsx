@@ -5,7 +5,7 @@ import Footer from "../../Sharde/Footer/Footer";
 
 const Root = () => {
     return (
-        <div>
+        <div className="font-rubik max-w-7xl mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

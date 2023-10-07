@@ -11,6 +11,8 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Sharde/AuthProvider/AuthProvider';
+import Booking from './Pages/Booking/Booking';
+import EventDetails from './Pages/EventDetails/EventDetails';
 
 const router = createBrowserRouter([
   {
@@ -23,8 +25,13 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "/events",
-        element: <Home></Home>
+        path: "/events/:id",
+        element: <EventDetails></EventDetails>,
+        loader: ()=> fetch("/events.json")
+      },
+      {
+        path: "/booking",
+        element: <Booking></Booking>
       },
       {
         path: "/login",

@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from "../../Sharde/AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,7 +8,24 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const [error, setError] = useState(null);
-    const {createUser} = useContext(AuthContext);
+    const [success, setSuccess] = useState(null)
+    const {createUser, googleLogin} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleSocialLogin = ()  =>{
+        setSuccess('');
+        setError('');
+        googleLogin()
+        .then(result =>{
+            console.log(result.user);
+            setSuccess("Successfully Register Your Account");
+            navigate("/");
+        })
+        .catch(error=>{
+            console.log(error.message);
+            setError(error.message)
+        })
+    }
 
     const handelRegister = e => {
         e.preventDefault();
@@ -51,12 +69,15 @@ const Register = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <p className="text-red-700">{error}</p>
+                            {error && <p className="text-red-700">{error}</p>}
+                            {success && <p className="text-green-500">{success}</p>}
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
                             <p>Already Have A Account Please <Link className="underline" to='/login'>Login</Link></p>
                         </form>
+                        <div className="divider"></div> 
+                        <button onClick={handleSocialLogin} className="btn btn-primary rounded-t-none"><FaGoogle></FaGoogle> Google Login</button>
                     </div>
                 </div>
             </div>

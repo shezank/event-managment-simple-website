@@ -1,12 +1,18 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Sharde/AuthProvider/AuthProvider";
+
+import Header from "../../Sharde/Header/Header";
+import Events from "../Events/Events";
+import OurTeams from "../OurTeams/OurTeams";
+import Users from "../Users/Users";
 
 
 const Home = () => {
-    const myName = useContext(AuthContext);
+
     return (
         <div>
-            <h1>Home {myName.name}</h1>
+            <Header></Header>
+            <Events></Events>
+            <OurTeams></OurTeams>
+            <Users></Users>
         </div>
     );
 };
