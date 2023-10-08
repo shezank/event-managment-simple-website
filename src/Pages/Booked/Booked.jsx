@@ -14,7 +14,6 @@ const Booked = ({ booked }) => {
                 <div className="card-actions justify-center">
                    <Link to={`/events/${id}`}> <button className="btn btn-primary">Check Details</button></Link>
                 </div>
-
             </div>
         </>
     );
