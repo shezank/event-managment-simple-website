@@ -3,7 +3,7 @@
 const Galary = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div data-aos="fade-up" className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                         Brand new
@@ -35,7 +35,7 @@ const Galary = () => {
                         </svg>
                         <span className="relative">Our</span>
                     </span>{' '}
-                     Photo Session Galary
+                    Photo Session Galary
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
                     Most importantly, we will always be available to support you every step of the way, because we know that personal care
@@ -43,7 +43,7 @@ const Galary = () => {
                 </p>
             </div>
             <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-3 sm:grid-cols-2">
-                <a
+                <a data-aos="zoom-in"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -55,7 +55,7 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                <a
+                <a data-aos="zoom-in-up"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -67,8 +67,8 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                
-                <a
+
+                <a data-aos="zoom-in-left"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -80,7 +80,7 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                <a
+                <a data-aos="zoom-in-right"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -92,7 +92,7 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                <a
+                <a data-aos="zoom-in"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -104,7 +104,7 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                <a
+                <a data-aos="zoom-in-left"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -116,7 +116,7 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                <a
+                <a data-aos="zoom-in-right"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -128,7 +128,7 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                <a
+                <a  data-aos="zoom-in"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -140,7 +140,7 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                <a
+                <a data-aos="zoom-in-left"
                     aria-label="View Item"
                     className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
                 >
@@ -152,9 +152,9 @@ const Galary = () => {
                         />
                     </div>
                 </a>
-                
+
             </div>
-            
+
         </div>
     );
 };

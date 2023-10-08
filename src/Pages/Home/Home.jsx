@@ -8,7 +8,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 const Home = () => {
+
+   
 
     const handleBookNow = id =>{
         const getEventsId = getEventsSaveId();

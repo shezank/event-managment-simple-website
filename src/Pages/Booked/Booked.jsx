@@ -5,7 +5,7 @@ const Booked = ({ booked }) => {
     const { id, title, price, img } = booked;
     return (
         <>
-            <div className="card card-compact bg-base-100">
+            <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact bg-base-100">
                 <figure><img src={img} alt={title} /></figure>
                 <div className="flex justify-between text-center">
                     <h2 className="card-title">{title}</h2>

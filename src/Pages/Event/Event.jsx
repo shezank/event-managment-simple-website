@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
 
+
 const Event = ({ event, handleBookNow }) => {
     const {id, title, price, img, buttonText } = event;
+    
     return (
-        <div className="card card-compact bg-base-100 shadow-xl">
+        <div data-aos="flip-left" className="card card-compact bg-base-100 shadow-xl">
             <figure><img src={img} alt={title} /></figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
