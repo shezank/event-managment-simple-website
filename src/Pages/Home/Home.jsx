@@ -1,4 +1,5 @@
 
+import { useContext } from "react";
 import Header from "../../Sharde/Header/Header";
 import { getEventsSaveId, saveEventsId } from "../../Sharde/LocalStorage/LocalStorage";
 import Events from "../Events/Events";
@@ -10,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
-
    
 
     const handleBookNow = id =>{

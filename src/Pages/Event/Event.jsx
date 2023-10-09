@@ -12,7 +12,7 @@ const Event = ({ event, handleBookNow }) => {
                 <h2 className="card-title">{title}</h2>
                 <p className="text-3xl font-medium">${price}</p>
                 <div className="card-actions justify-between">
-                    <Link to={`/events/${id}`}><button className="btn btn-outline btn-info">Lear More</button></Link>
+                    <Link to={`/events/${id}`}><button className="btn btn-outline btn-info">See Details</button></Link>
                     <button onClick={()=>handleBookNow(id)} className="btn btn-primary">{buttonText}</button>
                 </div>
             </div>

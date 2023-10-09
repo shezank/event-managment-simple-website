@@ -4,6 +4,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from "../../Sharde/AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -18,8 +19,10 @@ const Register = () => {
         googleLogin()
         .then(result =>{
             console.log(result.user);
-            setSuccess("Successfully Register Your Account");
-            navigate("/");
+            setTimeout(()=>{
+                navigate(location?.state ? location.state : "/");
+            }, 2000)
+            toast.success('Successfully Register Your Account');
         })
         .catch(error=>{
             console.log(error.message);
@@ -29,6 +32,8 @@ const Register = () => {
 
     const handelRegister = e => {
         e.preventDefault();
+        const username = e.target.username.value;
+        const photourl = e.target.photourl.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
@@ -45,12 +50,19 @@ const Register = () => {
         }
         createUser(email, password)
             .then( result =>  {
+                updateProfile(result.user,{
+                    displayName: username,
+                    photoURL: photourl
+                })
                 console.log(result.user);
-               toast.success('Successfully Register Your Account');
-               e.target.reset();
+                e.target.reset();
+                setTimeout(()=>{
+                    navigate(location?.state ? location.state : "/");
+                }, 2000)
+                toast.success('Successfully Register Your Account');
             })
             .catch(error => {
-                setError(error.message);
+                toast.error(error.message);
             })
 
     }
@@ -64,6 +76,18 @@ const Register = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handelRegister} className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">User Name</span>
+                                </label>
+                                <input type="text" name="username" placeholder="username" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo Url</span>
+                                </label>
+                                <input type="text" name="photourl" placeholder="Photo URL" className="input input-bordered" required />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
